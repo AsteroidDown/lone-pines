@@ -13,7 +13,7 @@ import {
 
 @Component({
   selector: "icon-link",
-  templateUrl: "/icon-link.component.html",
+  templateUrl: "./icon-link.component.html",
   styleUrls: ["./icon-link.component.scss"],
 })
 export class IconLinkComponent implements OnInit {

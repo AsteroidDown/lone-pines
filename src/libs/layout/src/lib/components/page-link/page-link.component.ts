@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({
   selector: "page-link",
-  templateUrl: "/page-link.component.html",
+  templateUrl: "./page-link.component.html",
   styleUrls: ["./page-link.component.scss"],
 })
 export class PageLinkComponent {

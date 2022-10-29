@@ -4,15 +4,16 @@
 }
 
 h4 {
+  color: white;
   margin-bottom: 2px;
 }
 
 .container {
-  border-bottom: 0px solid black;
+  border-bottom: 0px solid white;
   transition: border-bottom 0.2s;
 }
 
 .container:hover {
-  border-bottom: 2px solid black !important;
+  border-bottom: 2px solid white !important;
   transition: border-bottom 0.2s;
 }
