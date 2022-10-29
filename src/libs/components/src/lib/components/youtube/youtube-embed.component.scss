@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  display: flex;
+  min-height: 70%;
+  justify-content: center;
+  margin-top: 48px;
+  margin-bottom: 48px;
+
+  .column {
+    min-width: 70%;
+    max-width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    h1 {
+      font-weight: bold;
+      font-size: 64px;
+      line-height: 64px;
+      margin-bottom: 32px;
+    }
+  }
+}

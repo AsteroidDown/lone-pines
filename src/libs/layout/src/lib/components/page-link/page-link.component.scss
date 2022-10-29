@@ -1,0 +1,18 @@
+:host {
+  cursor: pointer;
+  margin: 8px;
+}
+
+h4 {
+  margin-bottom: 2px;
+}
+
+.container {
+  border-bottom: 0px solid black;
+  transition: border-bottom 0.2s;
+}
+
+.container:hover {
+  border-bottom: 2px solid black !important;
+  transition: border-bottom 0.2s;
+}

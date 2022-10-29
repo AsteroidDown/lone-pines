@@ -1,0 +1,17 @@
+:host {
+  cursor: pointer;
+  margin: 8px;
+
+  div {
+    height: 22px;
+    width: 18px;
+
+    a {
+      color: black;
+
+      mat-icon {
+        font-size: 22px;
+      }
+    }
+  }
+}

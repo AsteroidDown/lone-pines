@@ -1,0 +1,43 @@
+<div class="navbar">
+  <div style="flex: 1">
+    <h1 style="margin: 16px 0 0 48px">Lone Pines</h1>
+  </div>
+
+  <div class="page-links">
+    <page-link [routeTo]="''" [selected]="basePage === ''">
+      Lone Pines
+    </page-link>
+    <page-link [routeTo]="'shows'" [selected]="basePage === 'shows'">
+      Shows
+    </page-link>
+    <page-link [routeTo]="'about'" [selected]="basePage === 'about'">
+      About
+    </page-link>
+  </div>
+
+  <div class="social-links">
+    <icon-link
+      [link]="'https://www.instagram.com/bradenwilliams_/'"
+      [icon]="'instagram'"
+    ></icon-link>
+    <icon-link
+      [link]="'mailto:bradenw60@gmail.com'"
+      [icon]="'email'"
+    ></icon-link>
+    <icon-link
+      [link]="'https://www.youtube.com/channel/UCT-08YeRiPfH_GobRghwDEA'"
+      [icon]="'youtube'"
+    ></icon-link>
+    <icon-link
+      [link]="
+        'https://open.spotify.com/show/6kaRLsgaVXnkEbsN5vNiua?si=s8fd2z8gT2qV1JD2k3nGnA'
+      "
+      [icon]="'spotify'"
+    ></icon-link>
+    <icon-link
+      style="margin-right: 18px"
+      [link]="'https://www.facebook.com/braden.williams.560'"
+      [icon]="'facebook'"
+    ></icon-link>
+  </div>
+</div>
