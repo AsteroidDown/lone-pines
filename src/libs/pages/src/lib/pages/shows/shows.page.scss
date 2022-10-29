@@ -1,0 +1,23 @@
+.content {
+  display: flex;
+  margin-top: 96px;
+  justify-content: center;
+
+  .info {
+    display: flex;
+    min-width: 70%;
+    flex-direction: column;
+
+    mat-divider {
+      border-top-color: black;
+    }
+  }
+
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 64px;
+    margin-bottom: 24px;
+  }
+}

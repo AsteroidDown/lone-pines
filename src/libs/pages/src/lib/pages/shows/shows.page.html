@@ -1,2 +1,25 @@
-<h1>This is the shows page</h1>
-<h2>It's where we put informatoin about shows</h2>
+<background-cover-image
+  [src]="'assets/images/boys-in-la.jpeg'"
+></background-cover-image>
+
+<div class="content">
+  <div class="info">
+    <h1>Tour Dates</h1>
+
+    <div class="dates">
+      <show-details
+        [date]="'November 6, 2021'"
+        [title]="'Private Event'"
+        [location]="'Surrey, BC'"
+        [with]="'Soft Rock Cult Club'"
+      ></show-details>
+      <mat-divider></mat-divider>
+      <show-details
+        [date]="'December 17, 2021'"
+        [title]="'West Beach Bar and Grill'"
+        [location]="'White Rock, BC'"
+        [with]="'Kind of Blues'"
+      ></show-details>
+    </div>
+  </div>
+</div>

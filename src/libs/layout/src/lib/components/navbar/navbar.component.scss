@@ -7,6 +7,16 @@
   justify-content: space-between;
   background-color: rgb(0, 0, 0, 0.3);
 
+  .image {
+    flex: 1;
+    margin: 8px 0 8px 24px;
+
+    img {
+      max-height: 48px;
+      max-width: 48px;
+    }
+  }
+
   .page-links {
     flex: 1;
     gap: 12px;
@@ -19,7 +29,7 @@
   .social-links {
     flex: 1;
     display: flex;
-    margin: 10px 48px 0 0;
+    margin: 10px 24px 0 0;
     justify-content: flex-end;
   }
 }
