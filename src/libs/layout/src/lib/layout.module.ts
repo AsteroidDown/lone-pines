@@ -6,6 +6,10 @@ import {
 } from "./components";
 import { LayoutComponent } from "./pages";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { DirectivesModule } from "src/libs/directives/src/lib";
+import { NgPipesModule } from "ngx-pipes";
+import { CommonModule } from "@angular/common";
+import { MatIconModule } from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -14,7 +18,13 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
     PageLinkComponent,
     IconLinkComponent,
   ],
-  imports: [FontAwesomeModule],
+  imports: [
+    CommonModule,
+    NgPipesModule,
+    FontAwesomeModule,
+    MatIconModule,
+    DirectivesModule,
+  ],
   exports: [LayoutComponent],
 })
 export class LayoutModule {}

@@ -15,6 +15,9 @@
       "components": [
         "dist/components"
       ],
+      "directives": [
+        "dist/directives"
+      ],
       "layout": [
         "dist/layout"
       ]
