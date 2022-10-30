@@ -59,11 +59,22 @@
     background-color: black;
     transition: height 0.5s ease;
 
+    .title {
+      flex: 0;
+      height: 64px;
+      min-height: 64px;
+    }
+
     .page-links {
+      gap: 32px;
+      flex: 0;
+      height: 100%;
       flex-direction: column;
     }
 
     .social-links {
+      flex: 0;
+      margin: 24px 0;
       justify-content: center;
     }
   }
