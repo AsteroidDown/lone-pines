@@ -12,11 +12,25 @@
   </div>
 
   <div class="page-links" [style.display]="mobile && !expanded ? 'none' : ''">
-    <page-link [routeTo]="''" [selected]="basePage === ''"> Home </page-link>
-    <page-link [routeTo]="'shows'" [selected]="basePage === 'shows'">
+    <page-link
+      [routeTo]="''"
+      [selected]="basePage === ''"
+      (click)="toggleMenu()"
+    >
+      Home
+    </page-link>
+    <page-link
+      [routeTo]="'shows'"
+      [selected]="basePage === 'shows'"
+      (click)="toggleMenu()"
+    >
       Shows
     </page-link>
-    <page-link [routeTo]="'about'" [selected]="basePage === 'about'">
+    <page-link
+      [routeTo]="'about'"
+      [selected]="basePage === 'about'"
+      (click)="toggleMenu()"
+    >
       About
     </page-link>
   </div>

@@ -40,7 +40,26 @@
   }
 }
 
+.reviews {
+  display: flex;
+  flex-direction: column;
+
+  div {
+    gap: 96px;
+    margin: 0 64px;
+  }
+}
+
 .email {
   display: flex;
   justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .reviews {
+    div {
+      gap: 0;
+      margin: 0;
+    }
+  }
 }

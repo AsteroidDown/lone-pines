@@ -1,16 +1,45 @@
-<div class="background-image">
-  <img [style.height]="windowHeight + 'px'" [src]="'assets/images/home.jpeg'" />
-  <div class="text-box">
-    <div class="box">
-      <h1>lone pines</h1>
-      <p>In case Vancouver didn’t have enough moody indie bands</p>
+<ng-container *ngLet="isMobile$ | async as mobile">
+  <div class="background-image">
+    <img
+      [style.height]="windowHeight + 'px'"
+      [src]="'assets/images/home.jpeg'"
+    />
+    <div class="text-box">
+      <div class="box">
+        <h1>lone pines</h1>
+        <p>In case Vancouver didn’t have enough moody indie bands</p>
+      </div>
     </div>
   </div>
-</div>
 
-<youtube-embed [videoId]="'y-m41gZYzVY'">Boys In LA</youtube-embed>
-<youtube-embed [videoId]="'vZkAWz0tTcg'">You Are</youtube-embed>
+  <div class="reviews" [style.display]="mobile ? '' : 'flex'">
+    <div [style.display]="mobile ? '' : 'flex'">
+      <quote-review
+        [imagePosition]="'above'"
+        [quoter]="'Someone on Submithub'"
+        [imageSrc]="'assets/images/person1.jpg'"
+        [quote]="'Its good. Sounds a bit generic but at the same time it still pretty good overall.'"
+      ></quote-review>
+      <quote-review
+        [imagePosition]="'below'"
+        [quoter]="'Music for the Misfits'"
+        [imageSrc]="'assets/images/misfits.png'"
+        [quote]="'A recreation of a mysterious sound that perfectly matches their mysterious image'"
+      ></quote-review>
+    </div>
+    <quote-review
+      [style.margin]="mobile ? '-64px 0 0' : '0 20%'"
+      [imagePosition]="'left'"
+      [quoter]="'Eric Warn'"
+      [imageSrc]="'assets/images/person2.jpg'"
+      [quote]="'Oh damn, thank you for breaking my hort'"
+    ></quote-review>
+  </div>
 
-<div class="email">
-  <h2>Give us your personal information!</h2>
-</div>
+  <youtube-embed [videoId]="'y-m41gZYzVY'">Boys In LA</youtube-embed>
+  <youtube-embed [videoId]="'vZkAWz0tTcg'">You Are</youtube-embed>
+
+  <div class="email">
+    <h2>Give us your personal information!</h2>
+  </div>
+</ng-container>

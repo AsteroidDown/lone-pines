@@ -1,7 +1,9 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
+import { DirectivesModule } from "src/libs/directives/src/lib";
 import {
   BackgroundCoverImageComponent,
+  QuoteReviewComponent,
   ShowDetailsComponent,
   YoutubeEmbedComponent,
 } from "./components";
@@ -11,12 +13,14 @@ import {
     YoutubeEmbedComponent,
     BackgroundCoverImageComponent,
     ShowDetailsComponent,
+    QuoteReviewComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, DirectivesModule],
   exports: [
     YoutubeEmbedComponent,
     BackgroundCoverImageComponent,
     ShowDetailsComponent,
+    QuoteReviewComponent,
   ],
 })
 export class ComponentsModule {}
