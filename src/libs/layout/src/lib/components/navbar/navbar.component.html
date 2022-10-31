@@ -15,21 +15,21 @@
     <page-link
       [routeTo]="''"
       [selected]="basePage === ''"
-      (click)="toggleMenu()"
+      (click)="expanded ? toggleMenu() : ''"
     >
       Home
     </page-link>
     <page-link
       [routeTo]="'shows'"
       [selected]="basePage === 'shows'"
-      (click)="toggleMenu()"
+      (click)="expanded ? toggleMenu() : ''"
     >
       Shows
     </page-link>
     <page-link
       [routeTo]="'about'"
       [selected]="basePage === 'about'"
-      (click)="toggleMenu()"
+      (click)="expanded ? toggleMenu() : ''"
     >
       About
     </page-link>
