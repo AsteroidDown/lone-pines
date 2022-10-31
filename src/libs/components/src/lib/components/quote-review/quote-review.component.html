@@ -4,7 +4,8 @@
   [style.flex-direction]="getFlexDirection(mobile)"
 >
   <div
-    class="image"
+    #image
+    [class]="imageInView ? 'image in-view' : 'image'"
     [style.margin-right]="flexDirection === 'row' ? '48px' : ''"
     [style.margin-top]="flexDirection === 'column-reverse' ? '-64px' : ''"
     [style.align-self]="flexDirection === 'column-reverse' ? 'flex-end' : ''"
