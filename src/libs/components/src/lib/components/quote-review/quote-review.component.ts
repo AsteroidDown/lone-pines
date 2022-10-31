@@ -1,5 +1,12 @@
 import { BreakpointObserver } from "@angular/cdk/layout";
-import { Component, Input, OnInit } from "@angular/core";
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  Input,
+  OnInit,
+  ViewChild,
+} from "@angular/core";
 import { map, tap } from "rxjs";
 
 @Component({
@@ -10,6 +17,10 @@ import { map, tap } from "rxjs";
 export class QuoteReviewComponent implements OnInit {
   constructor(private breakpoints: BreakpointObserver) {}
 
+  @ViewChild("image")
+  private imageElement?: ElementRef<HTMLDivElement>;
+  imageInView = false;
+
   @Input() imageSrc = "";
   @Input() imagePosition = "";
   @Input() quote = "";
@@ -17,6 +28,16 @@ export class QuoteReviewComponent implements OnInit {
 
   flexDirection = "";
   isMobile = false;
+
+  @HostListener("window:scroll", ["$event"])
+  scrolledIntoView() {
+    if (this.imageElement && !this.imageInView) {
+      const rect = this.imageElement.nativeElement.getBoundingClientRect();
+      const topShown = rect.top >= 0;
+      const bottomShown = rect.bottom <= window.innerHeight;
+      this.imageInView = topShown && bottomShown;
+    }
+  }
 
   isMobile$ = this.breakpoints.observe("(max-width: 600px)").pipe(
     map(({ matches }) => matches),

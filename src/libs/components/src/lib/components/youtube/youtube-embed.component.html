@@ -1,6 +1,8 @@
 <div class="container" (window:resize)="resizeVideoBox()">
   <div class="column">
-    <h1><ng-content></ng-content></h1>
+    <h1 #title [class]="titleInView ? 'in-view' : ''">
+      <ng-content></ng-content>
+    </h1>
 
     <iframe
       #videoBox

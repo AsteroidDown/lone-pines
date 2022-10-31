@@ -5,7 +5,7 @@
       [src]="'assets/images/home.jpeg'"
     />
     <div class="text-box">
-      <div class="box">
+      <div #title [class]="titleInView ? 'box in-view' : 'box'">
         <h1>lone pines</h1>
         <p>In case Vancouver didn’t have enough moody indie bands</p>
       </div>
