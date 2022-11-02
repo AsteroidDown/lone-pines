@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/test-project",
+            "outputPath": "docs",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -194,6 +194,37 @@
             "main": "src/libs/components/src/test.ts",
             "tsConfig": "src/libs/components/tsconfig.spec.json",
             "karmaConfig": "src/libs/components/karma.conf.js"
+          }
+        }
+      }
+    },
+    "directives": {
+      "projectType": "library",
+      "root": "src/libs/directives",
+      "sourceRoot": "src/libs/directives/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "src/libs/directives/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "src/libs/directives/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "src/libs/directives/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/libs/directives/src/test.ts",
+            "tsConfig": "src/libs/directives/tsconfig.spec.json",
+            "karmaConfig": "src/libs/directives/karma.conf.js"
           }
         }
       }

@@ -2,6 +2,7 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  HostListener,
   Input,
   OnInit,
   ViewChild,
@@ -16,8 +17,22 @@ import { DomSanitizer, SafeResourceUrl } from "@angular/platform-browser";
 export class YoutubeEmbedComponent implements OnInit, AfterViewInit {
   constructor(private sanitizer: DomSanitizer) {}
 
+  @ViewChild("title")
+  private titleElement?: ElementRef<HTMLDivElement>;
+  titleInView = false;
+
   @ViewChild("videoBox") videoBox: ElementRef | null = null;
   @Input() videoId: string | null = null;
+
+  @HostListener("window:scroll", ["$event"])
+  scrolledIntoView() {
+    if (this.titleElement && !this.titleInView) {
+      const rect = this.titleElement.nativeElement.getBoundingClientRect();
+      const topShown = rect.top >= 0;
+      const bottomShown = rect.bottom <= window.innerHeight;
+      this.titleInView = topShown && bottomShown;
+    }
+  }
 
   youtubeUrl = "https://www.youtube.com/embed/";
   videoUrl: SafeResourceUrl = "";

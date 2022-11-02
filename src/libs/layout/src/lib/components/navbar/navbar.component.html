@@ -1,19 +1,41 @@
-<div class="navbar">
-  <div class="image">
+<div
+  *ngLet="isMobile$ | async as mobile"
+  class="navbar"
+  [style.height]="showMenu ? '100%' : '64px'"
+>
+  <div class="title">
     <img src="assets/images/lone-pine-white.png" />
+    <div *ngIf="mobile" class="mobile-info">
+      <h1>lone pines</h1>
+      <mat-icon (click)="toggleMenu()">menu</mat-icon>
+    </div>
   </div>
 
-  <div class="page-links">
-    <page-link [routeTo]="''" [selected]="basePage === ''"> Home </page-link>
-    <page-link [routeTo]="'shows'" [selected]="basePage === 'shows'">
+  <div class="page-links" [style.display]="mobile && !expanded ? 'none' : ''">
+    <page-link
+      [routeTo]="''"
+      [selected]="basePage === ''"
+      (click)="expanded ? toggleMenu() : ''"
+    >
+      Home
+    </page-link>
+    <page-link
+      [routeTo]="'shows'"
+      [selected]="basePage === 'shows'"
+      (click)="expanded ? toggleMenu() : ''"
+    >
       Shows
     </page-link>
-    <page-link [routeTo]="'about'" [selected]="basePage === 'about'">
+    <page-link
+      [routeTo]="'about'"
+      [selected]="basePage === 'about'"
+      (click)="expanded ? toggleMenu() : ''"
+    >
       About
     </page-link>
   </div>
 
-  <div class="social-links">
+  <div class="social-links" [style.display]="mobile && !expanded ? 'none' : ''">
     <icon-link
       [link]="'https://www.instagram.com/bradenwilliams_/'"
       [icon]="'instagram'"

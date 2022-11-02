@@ -16,30 +16,72 @@
   .text-box {
     height: 100%;
     display: flex;
+    position: absolute;
     flex-direction: column;
     justify-content: center;
-    position: absolute;
 
     .box {
       padding: 24px;
       background-color: rgb(0, 0, 0, 0.2);
 
       h1 {
-        text-align: center;
+        opacity: 0;
+        font-size: 52px;
         font-weight: bold;
-        font-size: 64px;
         line-height: 64px;
+        text-align: center;
         margin-bottom: 24px;
       }
 
       p {
+        opacity: 0;
         font-size: 18px;
+        text-align: center;
       }
     }
+
+    .box.in-view {
+      h1 {
+        opacity: 1;
+        font-size: 64px;
+        transition: opacity 1.5s ease, font-size 1.5s ease;
+      }
+
+      p {
+        opacity: 1;
+        transition-delay: 5s;
+        transition: opacity 3.5s ease;
+      }
+    }
+  }
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+
+  div {
+    gap: 96px;
+    margin: 0 64px;
   }
 }
 
 .email {
   display: flex;
   justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .reviews {
+    margin-bottom: -64px;
+
+    div {
+      gap: 0;
+      margin: 0;
+    }
+  }
+
+  .text-box {
+    width: 100%;
+  }
 }
