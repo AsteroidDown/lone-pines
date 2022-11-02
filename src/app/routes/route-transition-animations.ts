@@ -33,7 +33,7 @@ export const routeTransitionAnimations = trigger("routeAnimations", [
       style({
         position: "absolute",
         top: 0,
-        right: 0,
+        left: 0,
         width: "100%",
       }),
     ]),
