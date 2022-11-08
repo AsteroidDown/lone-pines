@@ -38,6 +38,12 @@ export class NavbarComponent implements OnInit {
 
   navigateHome() {
     this.router.navigate(["/"]);
+
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
   }
 
   ngOnInit() {
