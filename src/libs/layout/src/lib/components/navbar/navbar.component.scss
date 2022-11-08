@@ -13,10 +13,11 @@
     flex: 1;
     display: flex;
     color: white;
-    padding: 8px 0 0 24px;
     margin-bottom: 8px;
+    padding: 8px 0 0 24px;
 
     img {
+      cursor: pointer;
       max-width: 48px;
       max-height: 48px;
     }
@@ -27,6 +28,7 @@
       justify-content: space-between;
 
       h1 {
+        cursor: pointer;
         font-size: 32px;
         margin: 12px 0 0 16px;
       }
