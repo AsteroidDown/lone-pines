@@ -36,6 +36,10 @@ export class NavbarComponent implements OnInit {
     }
   }
 
+  navigateHome() {
+    this.router.navigate(["/"]);
+  }
+
   ngOnInit() {
     this.router.events.subscribe((value) => {
       if (value instanceof NavigationEnd) {
