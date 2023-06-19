@@ -1,5 +1,5 @@
 import { Route, Routes } from "@angular/router";
-import { AboutPage, HomePage, ShowsPage } from "src/libs/pages";
+import { AboutPage, HomePage, ShowsPage, AlmaSoundPage } from "src/libs/pages";
 
 const about: Route = {
   path: "about",
@@ -19,4 +19,10 @@ const shows: Route = {
   data: { animation: "Shows" },
 };
 
-export const appRoutes: Routes = [about, home, shows];
+const alma_sound: Route = {
+  path: "alma_sound",
+  component: AlmaSoundPage,
+  data: { animation: "Alma" },
+};
+
+export const appRoutes: Routes = [about, home, shows, alma_sound];

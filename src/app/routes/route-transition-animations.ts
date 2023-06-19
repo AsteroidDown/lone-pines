@@ -9,7 +9,7 @@ import {
 } from "@angular/animations";
 
 export const routeTransitionAnimations = trigger("routeAnimations", [
-  transition("Home => Shows, Home => About, Shows => About", [
+  transition("Home => Shows, Home => About, Home => Alma, Shows => About, Shows => Alma, About => Alma", [
     style({ position: "relative" }),
     query(":enter, :leave", [
       style({
@@ -27,7 +27,7 @@ export const routeTransitionAnimations = trigger("routeAnimations", [
     ]),
     query(":enter", animateChild()),
   ]),
-  transition("About => Shows, About => Home, Shows => Home", [
+  transition("Alma => About, Alma => Shows, Alma => Home, About => Shows, About => Home, Shows => Home", [
     style({ position: "relative" }),
     query(":enter, :leave", [
       style({

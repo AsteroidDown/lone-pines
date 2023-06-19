@@ -33,6 +33,13 @@
     >
       About
     </page-link>
+    <page-link
+            [routeTo]="'alma_sound'"
+            [selected]="basePage === 'alma_sound'"
+            (click)="expanded ? toggleMenu() : ''"
+    >
+      Alma Sound
+    </page-link>
   </div>
 
   <div class="social-links" [style.display]="mobile && !expanded ? 'none' : ''">

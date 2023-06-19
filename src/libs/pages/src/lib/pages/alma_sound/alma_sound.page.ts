@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: "alma sound",
+  selector: "alma_sound",
   templateUrl: "./alma_sound.page.html",
   styleUrls: ["./alma_sound.page.scss"],
 })
