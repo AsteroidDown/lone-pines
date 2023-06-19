@@ -33,6 +33,13 @@
     >
       About
     </page-link>
+    <page-link
+            [routeTo]="'alma_sound'"
+            [selected]="basePage === 'alma_sound'"
+            (click)="expanded ? toggleMenu() : ''"
+    >
+      Alma Sound
+    </page-link>
   </div>
 
   <div class="social-links" [style.display]="mobile && !expanded ? 'none' : ''">
@@ -41,11 +48,11 @@
       [icon]="'instagram'"
     ></icon-link>
     <icon-link
-      [link]="'mailto:bradenw60@gmail.com'"
+      [link]="'mailto:lpinemusic@gmail.com'"
       [icon]="'email'"
     ></icon-link>
     <icon-link
-      [link]="'https://www.youtube.com/channel/UCT-08YeRiPfH_GobRghwDEA'"
+      [link]="'https://www.youtube.com/@lonepines'"
       [icon]="'youtube'"
     ></icon-link>
     <icon-link
@@ -54,7 +61,7 @@
     ></icon-link>
     <icon-link
       style="margin-right: 18px"
-      [link]="'https://www.facebook.com/braden.williams.560'"
+      [link]="'https://www.facebook.com/lpinesmusic'"
       [icon]="'facebook'"
     ></icon-link>
   </div>
