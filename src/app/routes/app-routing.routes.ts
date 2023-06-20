@@ -20,7 +20,7 @@ const shows: Route = {
 };
 
 const alma_sound: Route = {
-  path: "alma_sound",
+  path: "alma",
   component: AlmaSoundPage,
   data: { animation: "Alma" },
 };
