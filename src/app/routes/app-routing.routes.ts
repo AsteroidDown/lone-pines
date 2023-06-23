@@ -19,10 +19,10 @@ const shows: Route = {
   data: { animation: "Shows" },
 };
 
-const alma_sound: Route = {
+const alma: Route = {
   path: "alma",
   component: AlmaSoundPage,
   data: { animation: "Alma" },
 };
 
-export const appRoutes: Routes = [about, home, shows, alma_sound];
+export const appRoutes: Routes = [about, home, shows, alma];
